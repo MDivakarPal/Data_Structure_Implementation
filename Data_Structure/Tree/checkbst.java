@@ -1,5 +1,5 @@
 /*
-BST- BST stands for Binary Search Tree.
+BST- BST stands for Binary Search Node.
 in BST data of root is always greater than data of left node and less than data of right
 */
 
@@ -18,13 +18,13 @@ class Node
 }
 
 class BSTInsert
-{   static int n=0;
+{
 	public static void main(String[]a)
 	{
 	   Scanner sc=new Scanner(System.in);
 	   System.out.println("Enter total no of nodes");
 	   Node root=null;
-	   n=Integer.parseInt(sc.next());
+	   int n=Integer.parseInt(sc.next());
 	   System.out.println("Enter data");
 	   for(int i=0;i<n;i++)
 		   root=bstinsert(root,sc.nextInt());
@@ -32,19 +32,10 @@ class BSTInsert
 	   int h=height(root);
 	   System.out.println("Height = "+(h-1));
 	   boolean res=checkBst(root);
-	   printList1();
 	   if(res)
 		   System.out.println("I am a BST tree");
 	   else
 		   System.out.println("I am not BST tree");
-	   
-	   // Search a data in to BST
-	   
-	   System.out.println("Enter searhing Element");
-	   if(searchBst(root, sc.nextInt()))
-		   System.out.println("Data found");
-	   else
-		   System.out.println("Data not found");
 	}
 	// Traversing of BST
 	static void inOrder(Node root)
@@ -57,7 +48,7 @@ class BSTInsert
 		}
 	}	
 	// Height of BST
-	static int height(Node root)
+	static int (Node root)
 	{
 		if(root == null)
 			return 0;
@@ -99,17 +90,11 @@ class BSTInsert
 	}
 	
 	// Check BST method
-	//static List <Integer> list1=new ArrayList<Integer>();
-	static int list1[]=new int[n];
-	static int dm=0;
-	{
-	System.out.println("Length = "+list1.length);
-		
-	}
+	
 	public static boolean checkBst(Node root)
 	{
 		boolean res=false;
-		/*	if(root !=null)
+			if(root !=null)
 			{
 				if(root.left!=null)
 				{
@@ -152,58 +137,48 @@ class BSTInsert
 					else
 						res=true;
 				}
-			}*/
-			
-			try{
-		if(root!=null)
-		{
-			checkBst(root.left);
-            list1[dm]=root.data;
-			dm=dm+1;
-			inOrder(root.right);
-		}
 			}
-			catch(Exception e)
-			{
-				
-			}
-		return res;
+			return res;
 	}
 	
-	public static void printList1()
-	{
-		    System.out.println("Size is "+list1.length);
-		    int i=0;
-		    for( i=0;i<list1.length;i++)
-			{System.out.print(list1[i]+" ");}
-	}
-	//Search in BST tree
 	
-	static boolean searchBst(Node root, int data)
-	{
-	    boolean res=false;
-		if(root !=null)
-		{
-			if(root.data==data)
-				res=true;
-			else if(root.left!=null)
-			{
-				if(root.data>data)
-					searchBst(root.left,data);
-				else if(root.right !=null)
-				{
-					if(root.data<data)
-					searchBst(root.right,data);
-				}
-			}
-			else if(root.right!=null)
-			{
-				if(root.data<data)
-					searchBst(root.right,data);
-			}
-		}
-		else
-			res=false;
-		return res;
-	}
+	// LEVEL ORDER TRAVERSAL
+	static int front1=-1,rear1=-1;
+    static List <Node> list = new ArrayList<Node> ();
+	public static void levelOrder(Node root) {
+         if(root!=null)
+        {
+            System.out.print(root.data+" ");
+            if(root.left!=null)
+            {
+                if(root.right!=null)
+                {
+                    front1++;
+                    list.add(front1,root.left);
+                    front1++;
+                    list.add(front1,root.right);
+                }
+                else
+                {
+                    front1++;
+                    list.add(front1,root.left);
+                }
+            }
+            else if(root.right!=null)
+            {
+                    front1++;
+                    list.add(front1,root.right);
+            }
+            try{
+              rear1++;
+              levelOrder(list.get(rear1));
+            }
+            catch(Exception e)
+            {
+               // System.out.println("Size is = "+ front1);
+            }
+        }
+
+    }
+
 }

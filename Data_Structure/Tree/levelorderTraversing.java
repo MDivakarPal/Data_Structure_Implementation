@@ -30,24 +30,11 @@ class Test
 			for(int j=0;j<n;j++)
 			insertNode(list.get(rear),sc.nextInt());
 		}		
-		System.out.println("Level order traversing of the tree");
-		levelOrder(list.get(0));
 		System.out.println("In order traversing of the tree");
 		inOrder(list.get(0));
 		}
 		else
 			System.out.println("Enter size is not valid");
-	}
-	
-	
-	static void inOrder(Node root)
-	{
-		if(root!=null)
-		{
-			inOrder(root.left);
-			System.out.print(root.data+" ");
-			inOrder(root.right);
-		}
 	}
 	//  Level order traversing
 	static int front1=-1,rear1=-1;
@@ -104,10 +91,5 @@ class Test
 			//list.remove(rear);
 			rear++;
 		}
-	}
-	
-	static Node delete(Node root)
-	{
-		
 	}
 }

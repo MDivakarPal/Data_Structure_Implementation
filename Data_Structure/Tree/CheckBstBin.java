@@ -27,13 +27,14 @@ class Test
 			root=new Node(sc.nextInt());
 			front++;
 			list.add(front,root);
-			for(int j=0;j<n;j++)
+			for(int j=1;j<n;j++)
 			insertNode(list.get(rear),sc.nextInt());
 		}		
 		System.out.println("Level order traversing of the tree");
-		levelOrder(list.get(0));
 		System.out.println("In order traversing of the tree");
 		inOrder(list.get(0));
+		System.out.println(checkBst(list.get(0)));
+		printList1();
 		}
 		else
 			System.out.println("Enter size is not valid");
@@ -49,44 +50,6 @@ class Test
 			inOrder(root.right);
 		}
 	}
-	//  Level order traversing
-	static int front1=-1,rear1=-1;
-    static List <Node> list1 = new ArrayList<Node> ();
-	public static void levelOrder(Node root) {
-         if(root!=null)
-        {
-            System.out.print(root.data+" ");
-            if(root.left!=null)
-            {
-                if(root.right!=null)
-                {
-                    front1++;
-                    list1.add(front1,root.left);
-                    front1++;
-                    list1.add(front1,root.right);
-                }
-                else
-                {
-                    front1++;
-                    list1.add(front1,root.left);
-                }
-            }
-            else if(root.right!=null)
-            {
-                    front1++;
-                    list1.add(front1,root.right);
-            }
-            try{
-              rear1++;
-              levelOrder(list1.get(rear1));
-            }
-            catch(Exception e)
-            {
-               // System.out.println("Size is = "+ front1);
-            }
-        }
-
-    }
 	
 	static void insertNode(Node root,int data)
 	{
@@ -105,9 +68,25 @@ class Test
 			rear++;
 		}
 	}
-	
-	static Node delete(Node root)
+		static List<Integer> list1=new ArrayList<Integer>();
+	public static boolean checkBst(Node root)
 	{
-		
+		boolean res=true;
+		int i=0;
+		if(root!=null)
+		{
+			checkBst(root.left);
+            list1.add(i,root.data);
+			i++;
+			inOrder(root.right);
+		}
+		return res;
+	}
+	
+	public static void printList1()
+	{
+		    int i=0;
+		    for( i=0;i<list1.size();i++)
+			System.out.println(list1.get(i));
 	}
 }
