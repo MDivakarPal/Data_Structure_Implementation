@@ -2,7 +2,6 @@
 <h3>
 This repository is developed for implementation of Data structure using java. It is growing repository.
 </h3>
-# Java_Programming_Examples_Theory
 Repository contains java concepts theory with example
 <h3>Developed By</h3> 
 <h3>Divakar Pal <a href="https://github.com/MDivakarPal">(MDivakarPal)</a></h3>
