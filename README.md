@@ -14,7 +14,20 @@ This repository is developed for implementation of Data structure using java. It
      <li> <a href="https://github.com/MDivakarPal/Data_Structure_Implementation/tree/master/Data_Structure/Tree">Tree</a></li>
   </ol>
  <h2>Arrays </h2>
- <p> Under Development</p>
+ <ol>
+  <li>
+   <h3>Optimization Problems</h3>
+    <h4><ol>
+      <li><a href="">Largest Sum Contiguous Subarray</a></li>
+      </ol> </h4></li>
+  <li> <h3>Arrangement Rearrangement</h3>
+    <h4>
+    <ol>
+      <li><a href="">Moves All Zeros</a></li>
+      </h4></ol>
+  </li>
+
+</ol>
  <hr>
  <h2>Hash Table / Hashing </h2>
   <h4>
