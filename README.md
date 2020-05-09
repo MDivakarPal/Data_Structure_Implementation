@@ -2,8 +2,7 @@
 <h3>
 This repository is developed for implementation of Data structure using java. It is growing repository.
 </h3>
-<h3>Developed By</h3> 
-<h3>Divakar Pal <a href="https://github.com/MDivakarPal">(MDivakarPal)</a></h3>
+<h3>Developed By :- Divakar Pal <a href="https://github.com/MDivakarPal">(MDivakarPal)</a></h3>
 <h3>DataStructure</h3>
 <ol>
   <li>  <a href="https://github.com/MDivakarPal/Data_Structure_Implementation/tree/master/Data_Structure/Array">Arrays</a></li>
