@@ -14,8 +14,9 @@ This repository is developed for implementation of Data structure using java. It
      <li> <a href="https://github.com/MDivakarPal/Data_Structure_Implementation/tree/master/Data_Structure/Tree">Tree</a></li>
   </ol>
  <h2>Arrays </h2>
- <hr>
  <p> Under Development</p>
+ <hr>
+ <h2>Hash Table / Hashing </h2>
   <h4>
     <ol>
       <li><a href="https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/" title='Refrence'>Chainig Hashing</a></li>
