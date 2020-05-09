@@ -15,8 +15,8 @@ This repository is developed for implementation of Data structure using java. It
   </ol>
  <h2>Arrays </h2>
  <p> Under Development</p>
- <h2><Hash Table / Hashing Technique</h2>
   <h4>
+ <h2><Hash Table / Hashing Technique</h2>
     <ol>
       <li><a href="https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/" title='Refrence'>Chainig Hashing</a></li>
       <li><a href="https://www.geeksforgeeks.org/hashing-set-3-open-addressing/" title='Refrence'>Linear Probing Hashing</a></li>
